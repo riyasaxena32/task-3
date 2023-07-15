@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        #header {
+            background-color: #333;
+            color: #130b0b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* Main content styles */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* About section styles */
+        .about-col-1 img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .about-col-2 {
+            margin-left: 20px;
+        }
+
+        .sub-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .tab-titles {
+            margin-top: 20px;
+        }
+
+        .tab-links {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-links.active-link {
+            color: #ff9900;
+            border-color: #ff9900;
+        }
+
+        .tab-contents {
+            margin-top: 20px;
+        }
+
+        .tab-contents ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tab-contents li {
+            margin-bottom: 10px;
+        }
+
+        .tab-contents span {
+            font-weight: bold;
+        }
+
+        /* Services section styles */
+        #services {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .services-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .services-list div {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-list i {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #ff9900;
+        }
+
+        .services-list h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact section styles */
+        #contact {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-left {
+            text-align: left;
+        }
+
+        .contact-left .sub-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-left p {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: #333;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        /* Contact form styles */
+        .contact-right form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            text-align: left;
+        }
+
+        .contact-right input,
+        .contact-right textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-right textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .contact-right button {
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .contact-right button:hover {
+            background-color: #e68a00;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #ff9900;
+        }
+    </style>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/d8dc52fa3c.js" crossorigin="anonymous">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Riya Raj Saxena</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="WhatsApp Image 2022-11-30 at 00.27.48.jpg" alt="Your Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, excepturi possimus unde quisquam placeat vel facere neque velit iusto voluptates ex eius sapiente reiciendis alias. Quidem iure molestiae totam tenetur.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>UI/UX</span><br>
+                                Designing Web interface
+                            </li>
+                            <li>
+                                <span>Web Development</span><br>
+                                Web app Development
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2022</span><br>
+                                Designing Web interface
+                            </li>
+                            <li>
+                                <span>2022</span><br>
+                                Web app Development
+                            </li>
+                            <li>
+                                <span>2023</span><br>
+                                Designing Web interface
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium beatae et officia? Ratione officiis natus officia veniam molestias quasi labore, nam neque ex alias excepturi facere, doloribus illo dolore! Ipsa.</p>
+                </div>
+                <div>
+                    <i class="fas fa-crop-simple"></i>
+                    <h2>UI Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium beatae et officia? Ratione officiis natus officia veniam molestias quasi labore, nam neque ex alias excepturi facere, doloribus illo dolore! Ipsa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; 2023 My Colorful Portfolio. All rights reserved. | Designed by <a href="#">Your Name</a>
+        </div>
+    </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
